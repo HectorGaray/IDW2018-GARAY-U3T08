@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#home">Usuarios</a></li>
+    <li><a href="#menu1">Consultar Usuarios</a></li>
+    <li><a href="#menu2">Nuevo Articulo</a></li>
+    <li><a href="#menu3">Consultar Articulos</a></li>
+   
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>Usuarios</h3>
+      <hr>
+      <label>Registro nuevo usuario</label>
+      <div>
+          <label class="control-label" for="email">Nombre:</label>
+          <div>
+            <input type="email" class="form-control" placeholder="Escribe tu nombre">
+          </div>
+        </div>
+        <div >
+          <label class="control-label">Contraseña:</label>
+          <div > 
+            <input type="text" class="form-control" placeholder="Escribe contraseña">
+          </div>
+        </div>
+
+        <div >
+            <label class="control-label">Edad:</label>
+            <div > 
+              <input type="text" class="form-control" placeholder="Escribe tu edad">
+            </div>
+          </div>
+
+        <div >
+            <label class="control-label">Correo:</label>
+            <div > 
+              <input type="text" class="form-control" placeholder="Escribe Correo Electronico">
+            </div>
+          </div>
+        
+        
+  
+
+ 
+   
+   
+
+    </div>
+    <div id="menu1" class="tab-pane fade">
+     
+      
+      <div class="container">
+            <h3>Consultar Usuarios</h3>
+        
+                  
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      
+      
+      
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Nuevo Articulo</h3>
+      
+
+
+      <label class="control-label" for="email">Nombre:</label>
+      <div>
+        <input type="email" class="form-control" placeholder="Escribe tu nombre">
+      </div>
+    
+    <div >
+      <label class="control-label">Contraseña:</label>
+      <div > 
+        <input type="text" class="form-control" placeholder="Escribe contraseña">
+      </div>
+    </div>
+</div>
+    <div id="menu3" class="tab-pane fade">
+            <div class="container">
+                    <h3>Consultar Articulos</h3>
+                
+                          
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Nombre</th>
+                      <th>Descripcion</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>latop</td>
+                      <td>laptop Descripcion</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Articulo 2</td>
+                      <td>Descripcion 2</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Articulo 3</td>
+                      <td>Descripcion 3</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>     
+
+
+
+
+          </div>
+          </div>
+</div>
+
+    
+    
+</div>
+
+<script>
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
+    $('.nav-tabs a').on('shown.bs.tab', function(event){
+        var x = $(event.target).text();         // active tab
+        var y = $(event.relatedTarget).text();  // previous tab
+        $(".act span").text(x);
+        $(".prev span").text(y);
+    });
+});
+</script>
+
+</body>
+</html>
